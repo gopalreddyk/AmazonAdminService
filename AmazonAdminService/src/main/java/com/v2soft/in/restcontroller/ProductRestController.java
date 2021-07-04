@@ -27,21 +27,17 @@ public class ProductRestController {
 	// insert data 
 	@PostMapping("/save")
 	public String   productSave(@RequestBody  Product   product){
-		
-		
-		String msg="";
+
+		String messge="";
 		try {
 			repo.save(product);
-			msg = "Detsils saved successfully";
+			messge = "Detsils saved successfully";
 		}
 		catch(Exception e) {
-			msg = " db not saved";
+			messge = " db not saved";
 		}
 				
-		return msg;
-		
-		
-		
+		return messge;
 		
 	}
 	
